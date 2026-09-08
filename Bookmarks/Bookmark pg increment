@@ -1,0 +1,1 @@
+var START_PAGE=365,END_PAGE=563,INCREMENT=-1,DOC=this,COUNT=0;function U(b){if(b.children)for(var i=0;i<b.children.length;i++)U(b.children[i]);try{b.execute();var p=DOC.pageNum;if(p>=START_PAGE&&p<=END_PAGE){b.setAction("this.pageNum="+(p+INCREMENT)+";this.zoomType=zoomtype.fitH;");COUNT++}}catch(e){}}U(DOC.bookmarkRoot);app.alert(COUNT+" bookmarks updated");
